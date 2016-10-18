@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Demo</title>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+</head>
+
+<body>
+
+  <h3>Fibonacci</h3>
+  <input type="text" class="text" id="length" name=""/>
+  <input type="submit" class="submit" value="Calculate" name="" onclick="fibonacci()"/>
+
+  <div class="output" id="output"></div>
+
+<script type="text/javascript">
+  function fibonacci(){
+    console.log('click!');
+    length = $('#length').val(); 
+    numbers = [];
+    var i = 0; 
+    numbers.push(i);
+    var j = 1;
+    numbers.push(j);
+
+    for(var k = 2; k < parseInt(length); k++){
+      var newNum = numbers[k-1]+numbers[k-2];
+      numbers.push(newNum);
+    }
+    $('#output').html("<h3>Fibonacci Series of length:"+length+"</h3><p>"+numbers.join(',')+"</p>");
+    $('#length').val(null);
+    
+  }
+
+
+
+
+   
+</script>
+</body>
+</html>
