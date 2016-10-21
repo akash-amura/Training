@@ -4,7 +4,7 @@ $(document).ready(function(){
   
 
     this.controllers = {
-      postsController: new App.Controllers.postsController({})
+      postsController: new App.Controllers.postsController({mainRegion:"#main-region"})
     };
 
     this.routers = {

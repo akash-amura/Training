@@ -4,17 +4,40 @@
 </head>
 
 <body>
+  <div id="main-region"></div>
+
   <script type="text/javascript" src="lib/underscore.js"></script>
   <script type="text/javascript" src="lib/jquery.js"></script>
   <script type="text/javascript" src="lib/backbone.js"></script>
   <script type="text/javascript" src="lib/backbone.radio.js"></script>
   <script type="text/javascript" src="lib/json2.js"></script>
   <script type="text/javascript" src="lib/backbone.marionette.js"></script>
+  <script type="text/javascript" src="lib/jst.js"></script>
   <script type="text/javascript" src="app.js"></script>
+
+  <!-- Routers -->
   <script type="text/javascript" src="backbone/routers/post_router.js"></script>
+
+  <!-- Models  -->
   <script type="text/javascript" src="backbone/models/post_model.js"></script>
+
+  <!-- Collections -->
   <script type="text/javascript" src="backbone/collections/posts_collection.js"></script>
+
+  <!-- Templates -->
+  <script type="text/javascript" src="backbone/templates/post_template.js"></script>
+  <script type="text/javascript" src="backbone/templates/post_item_template.js"></script>
+
+  <!-- Layouts -->
+  <script type="text/javascript" src="backbone/layouts/post_layout.js"></script>
+
+  <!-- Views -->
+  <script type="text/javascript" src="backbone/views/items/post_item_view.js"></script>
+  <script type="text/javascript" src="backbone/views/composites/post_composite_view.js"></script>
+
+  <!-- Controllers -->
   <script type="text/javascript" src="backbone/controllers/posts_controller.js"></script>
+
   <script type="text/javascript" src="init.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
-App.Layouts.ActivityLayout = Backbone.Marionette.Layout.extend({
-  template: JST["post"],
+App.Layouts.PostLayout = Backbone.Marionette.Layout.extend({
+
+  initialize: function(){
+  },
+
+  template: JST["post"]
+
 });

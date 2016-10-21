@@ -5,7 +5,9 @@ _.extend(App, {
 	Controllers: {},
 	Routers: {},
 	Layouts: {},
-	Views:{},
+  Views:{
+    Posts:{}
+  },
 	Constants: {},
 	vent: _.extend({}, Backbone.Events),
 	//base_url: "http://localhost:3000"
