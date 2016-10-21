@@ -1,0 +1,6 @@
+App.Routers.postRouter = Backbone.Marionette.AppRouter.extend({
+
+  appRoutes:{
+    '/akash':'doStuff'
+  }
+});

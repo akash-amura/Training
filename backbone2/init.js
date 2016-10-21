@@ -1,20 +1,15 @@
 $(document).ready(function(){
   console.log(App);
-  _.extend(App,{
+  App.addInitializer(function(){
 
-    initialize: function(){
-      this.controllers = {
-        postsController: new App.Controllers.postsController({mainRegion:"#mainRegion"})
-      };
+    this.controllers = {
+      postsController: new App.Controllers.postsController({})
+    };
 
-      this.routers = {
-        postRouter: new App.Routers.PostRouter({controller: App.Controllers.postsController})
-      };
+    this.routers = {
+      postRouter: new App.Routers.postRouter({controller: App.Controllers.postsController})
+    };
 
-      Backbone.history.start({pushState:true});
-    }
-    
   });
-
   App.start();
 });
