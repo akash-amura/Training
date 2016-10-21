@@ -7,8 +7,10 @@ $(document).ready(function(){
     };
 
     this.routers = {
-      postRouter: new App.Routers.postRouter({controller: App.Controllers.postsController})
+      postRouter: new App.Routers.postRouter({controller: this.controllers.postsController})
     };
+
+    Backbone.history.start({pushState:true});
 
   });
   App.start();
