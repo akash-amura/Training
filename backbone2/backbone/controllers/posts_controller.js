@@ -12,13 +12,22 @@ App.Controllers.postsController = Marionette.Controller.extend({
     });
 
     var myModel = new App.Models.postModel({title:"xyz",body:"abc"});
+    var myModel2 = new App.Models.postModel({title:"def",body:"abc"});
+
+    var myCollection = new App.Collections.postsCollection();
+    myCollection.add([myModel,myModel2]);
+
     console.log(myModel.toJSON());
     var layout = new App.Layouts.PostLayout();
-    //console.log(layout.render().el);
-    var itemView = new App.Views.Posts.postItemView({model:myModel});
-    console.log(itemView.render().el);
     $(this.mainRegion).prepend(layout.render().el);
-    $(this.mainRegion).append(itemView.render().el);
+    //console.log(layout.render().el);
+    //var itemView = new App.Views.Posts.postItemView({model:myModel});
+    //console.log(itemView.render().el);
+    //$(this.mainRegion).append(itemView.render().el);
+    var compositeView = new App.Views.Posts.postCompositeView({collection:postsCollection});
+    console.log(compositeView);
+    console.log(compositeView.render().el);
+    $(this.mainRegion).append(compositeView.render().el);
   },
 
   show: function(id){
