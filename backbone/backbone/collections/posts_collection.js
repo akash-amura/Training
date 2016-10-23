@@ -3,7 +3,6 @@ App.Collections.postsCollection = Backbone.Collection.extend({
   model: App.Models.postModel,
 
   initialize: function(){
-
   },
 
   parse: function(data){
